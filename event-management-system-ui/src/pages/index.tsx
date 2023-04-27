@@ -1,16 +1,5 @@
-import Head from "next/head";
-import React from "react";
-import TopbarComponent from "@/components/TopbarComponent";
+import MainLayout from "@/components/layouts/MainLayout";
 
-const Main = (props) => {
-  return (
-    <div>
-      <Head>
-        <title>Event Management System</title>
-      </Head>
-      <TopbarComponent />
-    </div>
-  );
-}
-
-export default Main;
+export default function Main() {
+  return <MainLayout/>;
+};
