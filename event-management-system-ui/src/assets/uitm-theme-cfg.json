@@ -1,0 +1,27 @@
+{
+  "schemes": [
+    {
+      "name": "UiTM",
+      "palette": {
+        "info": {
+          "main": "#61116a",
+          "light": "#af34ba",
+          "dark": "#3f0c44",
+          "contrastText": "#fffff"
+        },
+        "success": {
+          "main": "#312ba7",
+          "light": "#483eff",
+          "dark": "#3f0c44",
+          "contrastText": "#fffff"
+        },
+        "warning" : {
+          "main": "#febe10",
+          "light": "#ffd05b",
+          "dark": "#ac7f0e",
+          "contrastText": "#000000"
+        }
+      }
+    }
+  ]
+}

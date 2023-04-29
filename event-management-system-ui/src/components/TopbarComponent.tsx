@@ -8,22 +8,15 @@ import { purple } from '@mui/material/colors';
 import { styled } from '@mui/material/styles';
 import * as React from 'react';
 
-const CustomTopBar = styled(AppBar)(({ theme }) => ({
-  color: theme.palette.getContrastText(purple[50]),
-  backgroundColor: purple[50]
-}));
-
-export default function TopbarComponent() {
+export default function TopbarComponent({collapseSidebar, className, broken, toggleSidebar}:any) {
   const [state, setState] = React.useState({
     open: false
   });
 
-
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <CustomTopBar
-        position="static"
-        color="secondary">
+      <AppBar
+      className={`${className} sticky self-start w-auto top-0 bg-white text-black`}>
         <Toolbar>
           <IconButton
             size="small"
@@ -31,6 +24,9 @@ export default function TopbarComponent() {
             color="inherit"
             aria-label="open drawer"
             sx={{ mr: 2 }}
+            onClick={() => {
+              return broken ? toggleSidebar() : collapseSidebar();
+            }}
           >
             <MenuIcon />
           </IconButton>
@@ -53,7 +49,7 @@ export default function TopbarComponent() {
             Event Management
           </Typography>
         </Toolbar>
-      </CustomTopBar>
+      </AppBar>
     </Box>
   );
 }
