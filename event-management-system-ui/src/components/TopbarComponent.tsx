@@ -8,7 +8,7 @@ import { purple } from '@mui/material/colors';
 import { styled } from '@mui/material/styles';
 import * as React from 'react';
 
-export default function TopbarComponent({collapseSidebar, className, broken, toggleSidebar}:any) {
+export default function TopbarComponent(props:any) {
   const [state, setState] = React.useState({
     open: false
   });
@@ -16,7 +16,7 @@ export default function TopbarComponent({collapseSidebar, className, broken, tog
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
-      className={`${className} sticky self-start w-auto top-0 bg-white text-black`}>
+      className={`${props.className} sticky self-start w-auto top-0 bg-white text-black`}>
         <Toolbar>
           <IconButton
             size="small"
@@ -25,7 +25,7 @@ export default function TopbarComponent({collapseSidebar, className, broken, tog
             aria-label="open drawer"
             sx={{ mr: 2 }}
             onClick={() => {
-              return broken ? toggleSidebar() : collapseSidebar();
+              return props?.broken ? props.toggleSidebar() : props.collapseSidebar();
             }}
           >
             <MenuIcon />
