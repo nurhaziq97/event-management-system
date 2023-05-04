@@ -13,7 +13,7 @@ const MainLayoutContent = (props: any) => {
         </div>
         <div className="">
         </div>
-        <div className="flex flex-col md:flex-row mt-8 bg-black ">
+        <div className="flex flex-row md:flex-col mt-8">
           {props.children}
         </div>
       </div>
